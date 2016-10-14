@@ -1,0 +1,96 @@
+.si.fc{
+    color: #333333;
+    font-size: 15px;
+}
+.si{
+    border: 1px solid #dddddc;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+    clear: both;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: white;
+}
+.si .st{
+    float: left;
+    line-height: 32px;
+    padding: 0 8px;
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 350px;
+}
+.si .ow{
+    position: absolute;
+    top: 34px;
+    border: 1px solid #dddddc;
+    display: none;
+    background-color: white;
+    min-width: 382px;
+    left: -1px;
+}
+.si .op {
+    padding: 8px 8px;
+    white-space: nowrap;
+    padding-right: 41px;
+    min-width: 350px;
+}
+.si .op:hover {
+    background-color: #628BFF;
+    color: white;
+    cursor: pointer;
+}
+.sw {
+    border-left: 1px solid #dddddc;
+    float: left;
+    width: 30px;
+    height: 100%;
+}
+.os_ud:hover {
+    cursor: pointer;
+}
+.os_ud{
+    background-image: url(images/spinner_arrows.png);
+    background-repeat: no-repeat;
+    height: 50%;
+    -webkit-box-shadow: 0 0 0 1px #EAEAEA inset;
+    -moz-box-shadow: 0 0 0 1px #EAEAEA inset;
+    -ms-box-shadow: 0 0 0 1px #EAEAEA inset;
+    -o-box-shadow: 0 0 0 1px #EAEAEA inset;
+    box-shadow: 0 0 0 1px #EAEAEA inset;
+}
+.os_up.active {
+    background-position: 5px -4px;
+}
+.os_up.inactive {
+    background-position: 5px -52px;
+    opacity: 0.8;
+    background-color: #ECECEC;
+}
+.os_down.active {
+    background-position: 5px -27px;
+}
+.os_down.inactive {
+    background-position: 5px -77px;
+    opacity: 0.8;
+    background-color: #ECECEC;
+}
+.os_up.active:active {
+    -webkit-box-shadow: 0 0 0 1px #75ACFF inset;
+    -moz-box-shadow: 0 0 0 1px #75ACFF inset;
+    -ms-box-shadow: 0 0 0 1px #75ACFF inset;
+    -o-box-shadow: 0 0 0 1px #75ACFF inset;
+    box-shadow: 0 0 0 1px #75ACFF inset;
+}
+.os_down.active:active {
+    -webkit-box-shadow: 0 0 0 1px #75ACFF inset;
+    -moz-box-shadow: 0 0 0 1px #75ACFF inset;
+    -ms-box-shadow: 0 0 0 1px #75ACFF inset;
+    -o-box-shadow: 0 0 0 1px #75ACFF inset;
+    box-shadow: 0 0 0 1px #75ACFF inset;
+}
