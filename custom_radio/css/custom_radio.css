@@ -1,0 +1,15 @@
+.__rdo__ {
+    background-image: url(images/dp_radios8.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background-size: 20px;
+}
+.__rdo__.active{
+    background-position: 0px -61px;
+}
+.__rdo__.inactive{
+    background-position: 0px -41px;
+}
