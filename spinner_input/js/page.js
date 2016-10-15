@@ -22,7 +22,7 @@ var spinner2=false;
     spinner1.onChange(function(e){
         console.dir(e);
         var id= e.current_op.id;
-        spinner2.change_options(data2["id_"+id]);
+        spinner2.setData(data2["id_"+id]);
     });
     var data1=[{id:344,option:"small",label:"small"},{id:544,option:"large",label:"large"}];
     spinner2=new SpinnerInput('wrap2',data1,'select_option2');

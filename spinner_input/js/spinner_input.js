@@ -160,7 +160,7 @@ SpinnerInput.prototype= {
     onChange: function (f) {
         this.onchange=f;
     },
-    change_options:function(d){
+    setData:function(d){
         this.data=d;
         this.load_ops();
         this.set_current_op(this.data[0]);
