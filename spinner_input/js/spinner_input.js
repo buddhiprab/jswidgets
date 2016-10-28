@@ -25,11 +25,11 @@ function SpinnerInput(h,d,n) {
     input.setAttribute('type', 'hidden');
     input.setAttribute('name', this.input_name);
     widget_wrapper.appendChild(input);
-    widget_wrapper.className += "si fc";
+    widget_wrapper.classList.add("si","fc");
     //create text div
     var txt_div = document.createElement("div");
     this.txt_div = txt_div;
-    txt_div.setAttribute('class', 'st');
+    txt_div.classList.add('st');
     txt_div.onclick = this.toggle_options;
     document.onclick = this.hide_options;
     widget_wrapper.appendChild(txt_div);
@@ -37,18 +37,18 @@ function SpinnerInput(h,d,n) {
     var op_div_wrp = document.createElement("div");
     this.op_div_wrp = op_div_wrp;
     txt_div.options_wrp = op_div_wrp;
-    op_div_wrp.setAttribute('class', 'ow');
+    op_div_wrp.classList.add('ow');
     widget_wrapper.appendChild(op_div_wrp);
     var spinner_wrp_div = document.createElement("div");
-    spinner_wrp_div.className += "sw";
+    spinner_wrp_div.classList.add("sw");
     var spinner_up = document.createElement("div");
     this.spinner_up = spinner_up;
-    spinner_up.className += "os_ud os_up active";
+    spinner_up.classList.add("os_ud","os_up","active");
     spinner_up.spinner = this;
     spinner_up.onclick = this.spin_op;
     var spinner_down = document.createElement("div");
     this.spinner_down = spinner_down;
-    spinner_down.className += "os_ud os_down active";
+    spinner_down.classList.add("os_ud","os_down","active");
     spinner_down.spinner = this;
     spinner_down.onclick = this.spin_op;
     spinner_wrp_div.appendChild(spinner_up);
@@ -68,12 +68,12 @@ SpinnerInput.prototype= {
     spin_op: function (e) {
         var idx = false;
         var op = false;
-        if (e.target.className.indexOf('os_down') > -1) {
+        if (e.target.classList.contains('os_down')) {
             idx = this.spinner.data.indexOf(this.spinner.current_op);
             idx += 1;
             op = this.spinner.data[idx];
             this.spinner.set_current_op(op);
-        } else if (e.target.className.indexOf('os_up') > -1) {
+        } else if (e.target.classList.contains('os_up')) {
             idx = this.spinner.data.indexOf(this.spinner.current_op);
             idx -= 1;
             op = this.spinner.data[idx];
@@ -106,10 +106,8 @@ SpinnerInput.prototype= {
         }
     },
     set_spinner_status: function (s, a) {
-        var cl = s.className.split(' ');
-        cl.remove(['active', 'inactive']);
-        cl.push(a);
-        s.className = cl.join(' ');
+        s.classList.remove('active','inactive');
+        s.classList.add(a);
     },
     toggle_options: function (e) {
         if (this.options_wrp.style.display == 'block') {
